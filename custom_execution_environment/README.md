@@ -1,0 +1,6 @@
+
+# AWX building custom execution environment
+
+An **Execution Environment (EE)** in Ansible AWX is a standardized, containerized environment that encapsulates all dependencies needed to run Ansible Playbooks, including Ansible itself, Python libraries, system tools, and Ansible Collections. Unlike traditional setups where dependencies are installed on a host, EEs provide a consistent, isolated, and portable environment, ensuring that Playbooks execute reliably across different systems. This container-based approach aligns with modern DevOps practices, leveraging tools like Docker or Podman to package and distribute these environments.
+
+The need for Execution Environments arises from the challenges of managing complex dependency chains and ensuring reproducibility in automation workflows. Without EEs, differences in host environments (e.g., Python versions, installed packages) can lead to inconsistent Playbook execution or failures. EEs solve this by allowing users to define custom environments tailored to specific projects, ensuring that all required tools and configurations are bundled into a single, versioned image. This also simplifies scaling and deployment in AWX, as jobs can run in isolated containers without affecting the host system.
